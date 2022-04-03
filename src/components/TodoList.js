@@ -32,16 +32,16 @@ function TodoList({ todos, deleteTodo }) {
 
                     <HStack key={todo.id}>
                         <motion.div
-                            whileInView={{ x: [-100, 0], opacity: [0, 1] }}>
+                            animate={{ x: [-100, 0], opacity: [0, 1]}}>
                             <Text noOfLines={[3, 3, 3]}>{todo.content}</Text>
                         </motion.div>
                         <Spacer />
                         <motion.div
-                            whileInView={{ x: [100, 0], opacity: [0, 1] }}
+                            animate={{ x: [100, 0], opacity: [0, 1] }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             <IconButton
-                                colorScheme="teal"
+                                colorScheme="red"
                                 icon={<FaTrash />}
                                 isRound='true'
                                 onClick={() => deleteTodo(todo.id)}
